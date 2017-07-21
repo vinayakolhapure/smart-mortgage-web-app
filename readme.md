@@ -1,1 +1,0 @@
-# smart-mortgage-web-app
