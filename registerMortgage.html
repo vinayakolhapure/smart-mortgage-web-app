@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Asset Registry</title>
+  <link rel="shortcut icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQa8AVXvo8iAWiMydz4a4BIpWNaY0gay2Wx0IRf96RoUFb3w0ZK" />
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+  <header class="navbar-inverse" role="banner">
+			<div class="container">
+				<nav role="navigation">
+				  <div class="container-fluid">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="navbar-header">
+					  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					  </button>
+					  <a class="navbar-brand" href="index.html">Home</a>
+					</div>
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav">
+							<li class="active"><a href="registerMortgage.html">Create Mortgage<span class="sr-only">(current)</span></a></li>
+							<li><a href="updateMortgage.html">Update Mortgage</a></li>
+					  </ul>
+					  <div class="form-group navbar-form navbar-right">
+						  <li><button type="submit" onclick="App.todoMortgage()" class="btn btn-default">To Do</button></li>
+					  </div>
+					</div><!-- /.navbar-collapse -->
+				  </div><!-- /.container-fluid -->
+				</nav>
+			</div>
+		</header>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="panel panel-default">
+					  <div class="panel-heading"><h3>Create Mortgage Entry</h3></div>
+					  <div class="panel-body">
+						<div align="center">
+							<!--<form>-->
+                            <div class="col-sm-6">    
+                                    <div class="form-group row">
+                                    <label class="col-sm-2 col-form-label">Asset ID</label>
+                                    <div class="col-sm-10">
+                                        <input class="form-control" id="assetid" placeholder="Asset ID">
+                                    </div>
+                                    </div>
+                                    <div class="form-group row">
+                                    <label class="col-sm-2 col-form-label">Time</label>
+                                    <div class="col-sm-10">
+                                        <input class="form-control" id="starttime" placeholder="Registration Time">
+                                    </div>
+                                    </div>
+                                    <div class="form-group row">
+                                    <label class="col-sm-2 col-form-label">Mortgagee#</label>
+                                    <div class="col-sm-10">
+                                        <input class="form-control" id="mortgagee" placeholder="Mortgagee #">
+                                    </div>
+                                    </div>
+                                    <div class="form-group row">
+                                    <label class="col-sm-2 col-form-label">Mortgagor#</label>
+                                    <div class="col-sm-10">
+                                        <input class="form-control" id="mortgagor" placeholder="Mortgagor #">
+                                    </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6"> 
+                                    <div class="form-group row">
+                                    <label class="col-sm-2 col-form-label">Date</label>
+                                    <div class="col-sm-10">
+                                        <input class="form-control" id="datestart" placeholder="Date">
+                                    </div>
+                                    </div>
+                                    <div class="form-group row">
+                                    <label class="col-sm-2 col-form-label">Principal</label>
+                                    <div class="col-sm-10">
+                                        <input class="form-control" id="principal" placeholder="Principal Amount">
+                                    </div>
+                                    </div>
+                                    <div class="form-group row">
+                                    <label class="col-sm-2 col-form-label">Term</label>
+                                    <div class="col-sm-10">
+                                        <input class="form-control" id="term" placeholder="Loan Term">
+                                    </div>
+                                    </div>
+                                    <div class="form-group row">
+                                    <label class="col-sm-2 col-form-label">Interest</label>
+                                    <div class="col-sm-10">
+                                        <input class="form-control" id="interestwhole" placeholder="Interest Whole">
+                                    </div>
+                                    </div>
+                                    <div class="form-group row">
+                                    <label class="col-sm-2 col-form-label">Fraction</label>
+                                    <div class="col-sm-10">
+                                        <input class="form-control" id="interestfraction" placeholder="Interest Fraction">
+                                    </div>
+                                    </div>
+                                </div>
+								<div class="form-group row">
+								  <div class="offset-sm-2 col-sm-10" align="center">
+                                     <button id="create" class="btn btn-default" onclick="App.createMortgage()">Create Mortgage</button>
+								  </div>
+								</div>
+							<!--</form>-->
+						</div>
+						<!---->
+					  </div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="panel panel-default">
+						<div class="panel-body">
+							<div align="center">
+								<ul class="list-group" id="createFeedback">
+									
+								</ul>	
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="panel panel-default">
+						<div class="panel-body">
+							<div align="center">
+								<ul class="list-group" id="searchResult">
+									
+								</ul>	
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="navbar navbar-inverse navbar-fixed-bottom">
+			<div class="container">
+			  <p class="navbar-text pull-left">© 2017 - By PLACEHOLDER, for #UnitedByHCL.
+				   <a href="https://www.hackerearth.com/sprints/unitedbyhcl/" target="_blank" >The Event</a>
+			  </p>
+
+			  <a href="https://www.ethereum.org/" class="navbar-btn btn-danger btn pull-right">
+			  <span class="glyphicon glyphicon-star"></span> The Ethereum Project</a>
+			</div>
+		</div>
+<script src="./app.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+</html>
