@@ -49,19 +49,20 @@
                   <div class="form-group navbar-form navbar-left">
                             <input type="text" id="searchID" class="form-control" placeholder="Search">
                             <button type="submit" onclick="App.getMortgageByID()" class="btn btn-default">Search</button>
-                </div>
+                  </div>
+                  </br>
                 </br></br>
                   <div class="panel-body">
                      <div align="center">
                         <div class="tabbable">
                            <ul class="nav nav-tabs nav-pills" id="myTab">
-                              <li class="active"> <a href="#tab1" onclick="App.newMortgageRequest()" data-toggle="tab">History By Mortgage ID</a></li>
-                              <li class=""> <a href="#tab2" onclick="" data-toggle="tab">User Mortgage History </a></li>
-                              </li>
+                              <li class="active"> <a href="#tab1" data-toggle="tab">History By Mortgage ID</a></li>
+                              <!--<li class=""> <a href="#tab2" onclick="" data-toggle="tab">User Mortgage History </a></li>-->
                            </ul>
                            <br>
                            <div class="tab-content">
                               <div class="tab-pane active" id="tab1"> 
+                                <div id="current"><p id="currentText"></p></div>
                                  <table id="prevHistoryTable" class="table table-hover">
                                     <thead>
                                        <tr>
@@ -85,12 +86,16 @@
                                           <th>ID</th>
                                           <th>Mortgagee</th>
                                           <th>Mortgagor</th>
-                                          <th>Action</th>
+                                          <th>StartDate</th>
+                                          <th>LoanAmount</th>
+                                          <th>Term</th>
+                                          <th>Interest</th>
                                        </tr>
                                     </thead>
                                     <tbody>
                                     </tbody>
                                  </table>
+                                 <img src="http://www.iamazmi.com/wp-content/uploads/2016/05/underconstruction.jpg" alt="in Progress" style="width:304px;height:228px;">
                               </div>
                            </div>
                         </div>

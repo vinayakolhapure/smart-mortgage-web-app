@@ -66,6 +66,10 @@
                                  <a href="#" onclick="App.pendingRequests()" class="btn btn-default btn-block">View/Approve Pending Requests
                                  </a>
                               </tr>
+                              <tr>
+                                 <a href="previousMortgage.html" class="btn btn-default btn-block">Get Mortgage History
+                                 </a>
+                              </tr>
                            </tbody>
                         </table>
                      </div>
@@ -91,6 +95,7 @@
                               </li>
                            </ul>
                            <br>
+                           <div class="loader" id="pendingLoader" style="visibility: hidden;"></div>
                            <div class="tab-content">
                               <div class="tab-pane active" id="tab1">
                                  <table id="newReqTable" class="table table-hover">
